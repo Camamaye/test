@@ -8,9 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/XREAL XR Plugin/3.1.0/Interaction Basics/HelloMR/HelloMR.unity
     guid: 0c611a2881614c644b9df39be7bf8fe6
+  - enabled: 1
+    path: Assets/Samples/XREAL XR Plugin/3.1.0/MarkerTracking/MarkerTracking.unity
+    guid: a7108302b70545d44899e77a8b6f9a2f
+  - enabled: 0
+    path: Assets/Scenes/ImageDetection.unity
+    guid: 21e09e9320ac66e49aaaba98b3f66d80
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 18e89ad3146267a4a87cac721d527752, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
