@@ -54,6 +54,16 @@ namespace Unity.XR.XREAL.Samples
         void OnEnable()
         {
             m_TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+
+            //Check if system is runnning
+            if (m_TrackedImageManager.subsystem != null && m_TrackedImageManager.subsystem.running)
+            {
+                Debug.Log("[XREAL Image Tracking] Subsystem is RUNNING and actively scanning.");
+            }
+            else
+            {
+                Debug.LogError("[XREAL Image Tracking] Subsystem is NOT running! Check XR Plugin settings.");
+            }
         }
 
         void OnDisable()
@@ -100,8 +110,11 @@ namespace Unity.XR.XREAL.Samples
 
         void OnTrackedImagesChanged(ARTrackedImagesChangedEventArgs eventArgs)
         {
+            Debug.Log($"[XReal Image Tracking] Tracking Event Triggered");
+
             foreach (var trackedImage in eventArgs.added)
             {
+                Debug.Log($"[XReal Image Tracking] Successfully Detected: {trackedImage.referenceImage.name}");
                 // Give the initial image a reasonable default scale
                 trackedImage.transform.localScale = new Vector3(0.01f, 1f, 0.01f);
 
